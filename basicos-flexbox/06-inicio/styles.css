@@ -25,6 +25,13 @@ h2 {
     /* display:inline-flex; */
     display: flex;
     border: 3px solid black;
+
+    /* Alinear elementos */
+    justify-content: space-between;
+
+    /*Align item para elementos verticalmente*/
+    height: 400px;
+    align-items: center;
 }
 
 .elemento-flex {
@@ -33,7 +40,7 @@ h2 {
     /* Alinear **/ 
 }
 .elemento-flex:nth-child(1) {
-
+    align-self: flex-start;
 }
 
 .elemento-flex:nth-child(2) {
@@ -42,4 +49,5 @@ h2 {
 
 .elemento-flex:nth-child(3) {
     background-color: #3F51B5;
+    align-self: flex-end;
 }
