@@ -95,3 +95,41 @@ nav ul a {
         flex: 1;
     }
 }
+
+.dropdown ul{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .dropdown ul{
+        flex-direction: row;
+    }
+}
+
+.dropdown ul li{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .dropdown ul li{
+        position: relative;
+        display: flex;
+        flex: 1 1 100%;
+    }
+
+    .dropdown ul li ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ff5e62;
+    }
+
+    .dropdown ul li:hover ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
