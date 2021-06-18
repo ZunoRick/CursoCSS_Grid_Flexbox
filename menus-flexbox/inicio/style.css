@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     margin:0;
@@ -54,5 +58,40 @@ nav ul a {
 
     .sencillo ul li{
         margin-bottom: 0;
+    }
+}
+
+/** Iconos **/
+.iconos ul li a{
+    display: flex;
+    justify-content: center;
+}
+
+.iconos .icono{
+    flex: 0 1 2rem;
+}
+
+.iconos .texto span{
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+
+@media (min-width: 480px) {
+    .iconos ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Los cuatro li toman el mismo tamaño*/
+    .iconos ul li{
+        flex: 0 1 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .iconos ul li{
+        flex: 1;
     }
 }
