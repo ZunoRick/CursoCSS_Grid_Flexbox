@@ -1,0 +1,34 @@
+.oculto{
+    display: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        padding: 1.4rem 0;
+    }
+}
+
+.carrito-compras{
+    position: relative;
+
+    &:hover .contenido{
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $gris;
+        padding: 1rem;
+        max-width: 40rem;
+
+        img{
+            max-width: 15rem;
+        }
+
+        .boton{
+            @include boton($principal, block);
+        }
+    }
+}
