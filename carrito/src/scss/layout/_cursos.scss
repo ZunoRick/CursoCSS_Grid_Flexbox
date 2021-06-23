@@ -1,0 +1,50 @@
+.cursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .curso{
+        .imagen-curso{
+            width: 100%;
+        }
+
+        flex: 0 1 calc(50% - 1rem);
+        border: 1px solid darken($gris, 10) ;
+        margin-bottom: 2rem;
+        @include tablet{
+            flex: 0 1 calc(33% - 1rem);
+        }
+
+        @include desktop{
+            flex: 0 1 calc(25% - 1rem);
+        }
+    }
+}
+
+.info-curso{
+    padding: 1rem;
+    
+    h4{
+        text-align: center;
+    }
+
+    .precio{
+        display: flex;
+        justify-content: space-between;
+
+        .regular{
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .oferta{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: green;
+        }
+    }
+
+    .boton{
+        @include boton($secundario, block);
+    }
+}

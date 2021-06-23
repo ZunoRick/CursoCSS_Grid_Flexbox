@@ -48,3 +48,7 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+@mixin gradiente($color1, $color2){
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
