@@ -26,3 +26,16 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+@mixin boton($bgColor, $color){
+    background-color: $bgColor;
+    color: $color;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: $radius;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
