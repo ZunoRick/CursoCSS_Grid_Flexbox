@@ -9,7 +9,7 @@
         }
 
         flex: 0 1 calc(50% - 1rem);
-        border: 1px solid darken($gris, 10) ;
+        border: 1px solid darken($gris, 10);
         margin-bottom: 2rem;
         @include tablet{
             flex: 0 1 calc(33% - 1rem);
