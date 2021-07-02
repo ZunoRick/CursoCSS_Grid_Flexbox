@@ -16,6 +16,15 @@ body {
 img {
     max-width: 100%;
 }
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
 .centrado {
     text-align:center;
 }
@@ -27,4 +36,161 @@ img {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.header{
+    display: flex;
+    
+    .nombre-sitio{
+        flex: 0 0 5rem;
+
+        @include desktop{
+            flex: 0 0 20rem;
+        }
+
+        background-color: $secundario;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+
+        h1{
+            color: $blanco;
+            margin: 0;
+        }
+
+        .escritorio{
+            display: none;
+            @include desktop{
+                display: block;
+            }
+        }
+
+        .movil{
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background-color: $primario;
+
+    .menu-izquierdo{
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .menu-derecho{
+        display: flex;
+
+        .caja{
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+
+            &:hover{
+                background-color: darken($primario, $amount: 5);
+            }
+
+            a{
+                text-decoration: none;
+                color: $blanco;
+
+                span{
+                    background-color: $terciario;
+                    border-radius: 50%;
+                    padding: 0.5rem;
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.sidebar{
+    background-color: $grisOscuro;
+    flex: 0 0 20rem;
+    padding: 1rem;
+    color: $blanco;
+
+    .usuario{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-weight: normal;
+        flex-direction: column;
+        img{
+            max-width: 5rem;
+        }
+
+        span{
+            font-weight: bold;
+        }
+    }
+
+    .buscador{
+        margin-top: 1rem;
+        input[type="text"]{
+            width: 100%;
+            height: 3rem;
+            border: none;
+            border-radius: 10px;
+            padding-left: 1rem;
+        }
+    }
+
+    .menu-admin{
+        margin-top: 2rem;
+    }
+}
+
+.menu-admin{
+    .menu{
+        padding: 0 0 0 1rem;
+
+        > li{
+            padding: 0.5rem;
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+
+            a{
+                color: $blanco;
+                padding: 0.5rem;
+                transition: padding-left 0.3s ease;
+
+                &:hover{
+                    background-color: $primario;
+                    padding-left: 2rem;
+                }
+            }
+
+            ul{
+                display: none;
+                margin-top: 1rem;
+                background-color: darken($grisOscuro, 3);
+                padding: 1rem;
+
+                li{
+                    margin-bottom: 1rem;
+
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contenedor-principal{
+    flex: 1;
+    display: flex;
 }
