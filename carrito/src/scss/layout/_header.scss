@@ -1,34 +1,42 @@
-.oculto{
-    display: none;
+.oculto {
+	display: none;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    .logo{
-        padding: 1.4rem 0;
-    }
+	.logo {
+		padding: 1.4rem 0;
+	}
 }
 
-.carrito-compras{
-    position: relative;
+.carrito-compras {
+	position: relative;
 
-    &:hover .contenido{
-        display: block;
-        position: absolute;
-        right: 0;
-        background-color: $gris;
-        padding: 1rem;
-        max-width: 40rem;
+	&:hover .contenido {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		z-index: 1;
+		background-color: white;
+		padding: 20px;
+		min-height: 400px;
+		min-width: 300px;
 
-        img{
-            max-width: 15rem;
+		img {
+			max-width: 15rem;
+		}
+
+		.boton {
+			@include boton($principal, block);
+		}
+
+        #lista-carrito{
+            width: 100%;
+            box-sizing: border-box;
         }
-
-        .boton{
-            @include boton($principal, block);
-        }
-    }
+	}
 }
